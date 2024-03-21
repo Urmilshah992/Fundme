@@ -48,7 +48,7 @@ contract FundMe {
 
     constructor(address priceFeed) {
         s_priceFeed = AggregatorV3Interface(priceFeed);
-        i_owner = msg.sender;s
+        i_owner = msg.sender;
     }
 
     /// @notice Funds our contract based on the ETH/USD price
