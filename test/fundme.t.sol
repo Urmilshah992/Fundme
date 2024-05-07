@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
+
 import {Test, console} from "forge-std/Test.sol";
 import {FundMe} from "../src/FundMe.sol";
 import {DeployFundMe} from "../script/DeployFundMe.s.sol";
@@ -18,7 +19,7 @@ contract testFundme is Test {
     }
 
     function testowner() public view {
-        assertEq(fundme.i_owner(), address(this));
+        assertEq(fundme.i_owner(), msg.sender);
     }
 
     function testpriceaggreator() public view {
